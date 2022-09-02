@@ -1,22 +1,32 @@
 #include <iostream>
 using namespace std;
-int main()
-{    int mval = 2;
-    int inp;
-    cout<<"enter a number: ";
-    cin>>inp;
-    //input
-    for (inp%mval > 0; inp%mval > 0 && mval <= 0.5*inp; mval = mval + 1){
-     cout << endl;
+bool PRIMER(int inp)
+{    int i = 2;
+    for (inp%i > 0; inp%i > 0 && i <= 0.5*inp; i++ ){
+        cout << endl;
    /*if remainder is greater than 0 and less than half of input
    keep on adding to the modulus value to test for prime numbers*/    
     }
-    if (inp%mval > 0 || inp == 0 || inp == 1 || inp == 2){
-        cout<<"prime";
+    if (inp%i > 0 || inp == 0 || inp == 1 || inp == 2){
+       //prime
+        bool prime;
+        return prime = true;
         //if the remainder is greater than 0 prime
     } else {
-     cout<<"noprime";  
+            //noprime
+            bool prime = false;
+            return prime;
+        
     }//if its 0 then noprime
-
-    return 0;
+}
+int main(){
+    
+    int inp;
+    cout << "enter a number: ";
+        cin >> int inp;
+    bool prime;
+    prime = PRIMER(inp);
+        cout << "primeState" << prime;
+return 0;
+    
 }
