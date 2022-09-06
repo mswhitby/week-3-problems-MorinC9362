@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+bool PRIMER(int inp){
+    int i = 2;
+    for (inp%i > 0; inp%i > 0 && i <= 0.5*inp; i++ ){
+        cout << endl;
+   /*if remainder is greater than 0 and less than half of input
+   keep on adding to the modulus value to test for prime numbers*/    
+    }
+    if (inp%i > 0 || inp == 0 || inp == 1 || inp == 2){
+        //primeTrue
+        bool prime;
+        return prime = true;
+        //if MOD > 0 primeTrue; exceptions for 0, 1, 2
+    } else {
+            //primeFalse
+            bool prime = false;
+            return prime;
+        
+    }//if MOD 0 then noprime
+}
+int main(){
+    int inp;
+    cout << "enter a number: ";
+        cin >> inp;
+    bool prime = PRIMER(inp);
+        cout << "primeState: " << prime;
+return 0;
+    
+}
